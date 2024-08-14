@@ -1,0 +1,41 @@
+Here’s the revised section for schema creation and dataset import using MySQL:
+
+---
+
+### MySQL Schema Creation
+
+```sql
+CREATE DATABASE swiggy;
+
+USE swiggy;
+
+CREATE USER 'swiggy'@'localhost' IDENTIFIED BY 'swiggy';
+
+GRANT ALL PRIVILEGES ON swiggy.* TO 'swiggy'@'localhost';
+
+FLUSH PRIVILEGES;
+```
+
+### Importing Datasets into MySQL
+
+1. **Database**: MySQL
+2. **Tool**: Use tools like MySQL Workbench or phpMyAdmin for importing CSV files into the tables.
+
+**Steps:**
+
+1. **Open MySQL Workbench** (or your preferred MySQL client).
+2. **Connect to your MySQL server**.
+3. **Select the `swiggy` database**:
+   ```sql
+   USE swiggy;
+   ```
+4. **Right-click on the `Tables` section** and select `Table Data Import Wizard`.
+5. **Select your CSV file** to import.
+6. **Map the columns** from the CSV to the table schema.
+7. **Click `Next` and complete the import process**.
+
+Repeat these steps for each dataset (CSV file) to import them into the `swiggy` schema.
+
+---
+
+This guide should help you create the schema and import data into your MySQL database.
